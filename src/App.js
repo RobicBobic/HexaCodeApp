@@ -5,7 +5,6 @@ import './App.css';
 const HexaCodeWebsite = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrollY, setScrollY] = useState(0);
-  const [activeSection, setActiveSection] = useState('home');
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const [demoStep, setDemoStep] = useState(0);
   const [showTrialModal, setShowTrialModal] = useState(false);
@@ -26,7 +25,6 @@ const HexaCodeWebsite = () => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
-      setActiveSection(sectionId);
       setIsMenuOpen(false);
     }
   };
